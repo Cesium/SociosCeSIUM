@@ -1,4 +1,6 @@
 ContasCesium::Application.routes.draw do
+  get "transaction/create"
+  get "transaction/index"
   get "category/index"
   get "category/new"
   post "category/new" => "category#create"
