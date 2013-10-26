@@ -1,4 +1,19 @@
 ContasCesium::Application.routes.draw do
+  # Companies
+
+  ## List All
+  get "company/index"
+  get "company(/index)" => "company#index"
+  ## Create
+  get "company/new"
+  post "company/new" => "company#create"
+  ## Update
+  get "company/edit/:id" => "company#edit"
+  post "company/edit/:id" => "company#update"
+  ## Delete
+  get "company/delete/:id" => "company#delete"
+  ## View
+  get "company/view/:id" => "company#view"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

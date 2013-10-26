@@ -1,0 +1,20 @@
+<h1>Company#index</h1>
+<h1>Listing companies</h1>
+
+<table>
+  <tr>
+  	<th>ID</th>
+    <th>Name</th>
+    <th>NIF</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @companies.each do |company| %>
+    <tr>
+    	<td><%= company.id %></td>
+      <td><%= company.name %></td>
+      <td><%= company.nif %></td>
+      <td><%= company.description %></td>
+    </tr>
+  <% end %>
+</table>
