@@ -4,12 +4,12 @@ class CategoryController < ApplicationController
   	@category = Category.new
   end
 
-  def index
-  end
-
   def create
   	@category = Category.new(category_params)
   	@category.save
+  end
+
+  def index
   end
 
   def update
