@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ContasCesium</title>
+  <title>Plataforma para gestão das Contas do CeSIUM</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="container">
+    <div id="header">
+      <div class="wrapper">
+       
+        <div id="logo"><a href="/"><%= link_to image_tag("logo.png", :border=>0), root_path %></a></div>
 
-<%= yield %>
-
+        <div id="menu">
+        	<ul>
+        		
+        		<li><a href="/log-slash-cesium">Entidades</a></li>
+        		<li><a href="/uminho-cup">Categorias</a></li>
+        		<li><a href="/quem-somos">Transacções</a></li>
+        		<li><a href="/contactos">Relatórios</a></li>
+        	</ul>
+        </div>
+      </div>
+    </div>	
+    		<div class="text-center pagination-centered">
+					<%= yield %>
+				</div>				
+	</div>
+	
 </body>
 </html>
